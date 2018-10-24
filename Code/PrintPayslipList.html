@@ -10,40 +10,12 @@
 
     <!-- font awsome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <style type="text/css">
-      .modal-dialog,
-      .modal-content {
-          /* 80% of window height */
-          height: 90%;
-      }
-
-      .modal-body {
-          /* 100% = dialog height, 120px = header + footer */
-          max-height: calc(100% - 120px);
-          overflow-y: scroll;
-      }
-    </style>
     <title>Payslip List</title>
   </head>
   <body>
     <!-- Code Start:section -->
     <div class="container">
-        <!-- Button trigger modal -->
-        <button type="button" id = "printButton" class="btn btn-primary" data-toggle="modal" data-target="#openPrintPayslipModal">
-          Launch demo modal
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="openPrintPayslipModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Payslip Summary</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body" id="modalToPrint">
+        <div id="modalToPrint">
                 
 
 
@@ -145,17 +117,7 @@
                     </div>
                   </div>
                 </div>
-
-
-
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id ="printSummaryButton"><i class="fas fa-print"></i> Print Payslip Details</button>
-              </div>
-            </div>
-          </div>
-        </div>
     </div>
     <!-- code END:section -->
 
@@ -164,18 +126,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../lib/printThis.js"></script>
     <script type="text/javascript">
       $(function(){
-        console.log("helj");
-        $("#printButton").click();
-        $("#printSummaryButton").click(function(){
-          //$("#modalToPrint").printElement();
-          console.log("print button clalled");
-          
-          window.location.href = "./PrintPayslipList.html";
-
-        });
+        console.log("printing...");
+        window.print();
+        
       });
     </script>
   </body>
