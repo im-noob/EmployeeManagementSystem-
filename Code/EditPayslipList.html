@@ -22,27 +22,27 @@
             <form>
               <div class="form-group">
                 <label for="ID">ID</label>
-                <input type="email" class="form-control" id="ID">
+                <input type="text" class="form-control" id="ID">
               </div>
               
               <div class="form-group">
                 <label for="EmployeeName">Employee Name</label>
-                <input type="email" class="form-control" id="EmployeeName">
+                <input type="text" class="form-control" id="EmployeeName">
               </div>
 
               <div class="form-group">
                 <label for="BasicSalary">Basic Salary</label>
-                <input type="email" class="form-control" id="BasicSalary">
+                <input type="text" class="form-control" id="BasicSalary">
               </div>
 
               <div class="form-group">
                 <label for="TotalAllowance">Total Allowance</label>
-                <input type="email" class="form-control" id="TotalAllowance">
+                <input type="text" class="form-control" id="TotalAllowance">
               </div>
 
               <div class="form-group">
                 <label for="Deducation">Deducation</label>
-                <input type="email" class="form-control" id="Deducation">
+                <input type="text" class="form-control" id="Deducation">
               </div>
 
 
@@ -62,7 +62,7 @@
                         </select>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+              <button type="submit" id="submitButton" class="btn btn-primary btn-block">Submit</button>
             </form>
           </div>
         </div>
@@ -96,8 +96,32 @@
         $("#Date").val($data[0].date);
         $("#StatusDropDown").val($data[0].status); 
 
+        $("#submitButton").click(function(){
+          $newId = $("#ID").attr("value");
+          $newEmployeeName = $("#EmployeeName").attr("value");
+          $newBasicSalary = $("#BasicSalary").attr("value");
+          $newTotalAllowance = $("#TotalAllowance").attr("value");
+          $newDeducation =$("#Deducation").attr("value");
+          $newDate = $("#Date").val();
+          $newStatus = $("#StatusDropDown").val(); 
 
+          $.ajax({
+            url: "test.html",
+            type: "POST",
+            data: {
+              newId:$newId,
+              newEmployeeName:$newEmployeeName,
+              newBasicSalary:$newBasicSalary,
+              newTotalAllowance:$newTotalAllowance,
+              newDeducation:$newDeducation,
+              newDate:$newDate,
+              newStatus:$newStatus,
 
+            },
+          }).done(function() {
+                
+          });
+        });
       });
     </script>
   </body>
