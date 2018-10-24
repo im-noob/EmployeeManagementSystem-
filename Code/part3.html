@@ -21,8 +21,8 @@
         <div class="row justify-content-md-center">
           <div class="col-sm-3">
             <div class="form-group">
-              <label for="MothDropDown">Month</label>
-              <select class="form-control" id="MothDropDown">
+              <label for="MonthDropDown">Month</label>
+              <select class="form-control" id="MonthDropDown">
                 <option value="January">January</option>
                 <option value="February">February</option>
                 <option value="March">March</option>
@@ -41,7 +41,11 @@
           <div class="col-sm-3">
             <div class="form-group">
               <label for="YearDorpDown">Year</label>
-              <select class="form-control" id="YearDorpDown">
+              <select class="form-control" id="YearDropDown">
+                <option value="2018">2018</option>
+                          <option value="2017">2017</option>
+                          <option value="2016">2016</option>
+                          <option value="2015">2015</option>
                   <option value="2014">2014</option>
                   <option value="2013">2013</option>
                   <option value="2012">2012</option>
@@ -163,14 +167,14 @@
           <div class="col-sm-2">
             <br>
             <div class="form-group">
-              <button type="button" class="btn btn-primary btn-lg btn-block">Search</button>              
+              <button type="button" class="btn btn-primary btn-lg btn-block" id="search">Search</button>              
             </div>
           </div>
       </div>
       <!-- row 1:end -->
       <!-- Table Start -->
       <div class="table-responsive">
-        <table class="table table-hover table-bordered">
+        <table class="table table-hover table-bordered" id="payslipTable">
           <thead>
             <tr>
               <th>#</th>
@@ -184,6 +188,7 @@
           </thead>
           <tbody>
             
+            <!-- 
             <tr>
               <td>1</td>
               <td>EMPID27088</td>
@@ -221,208 +226,8 @@
                   </div>
                 </div>
               </td>
-            </tr>
-
-            <tr>
-              <td>2</td>
-              <td>EMPID27088</td>
-              <td>India Stone</td>
-              <td class="container">
-                <DIV class="row">
-                  <span class="offset-md-2 col-sm-4" >Basic Salary:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">15000</span>
-                </DIV>
-                <div class="row">
-                  <span class="offset-md-2 col-sm-4">Total Allowance:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">100</span>          
-                </div>
-                <div class="row">
-                  <span class="offset-md-2 col-sm-4">Total Deducation:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">0</span>       
-                </div>
-                <hr>
-                <div class="row">
-                  <span class="offset-md-2 col-sm-4">Net Salary:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">150100</span>
-                </div>
-              </td>
-              <td>June, 2018</td>
-              <td><button type="button" class="btn btn-success">paid</button></td>
-              <td>
-                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="DropDownActionButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Action
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="DropDownActionButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-
-
-
-            <tr>
-              <td>3</td>
-              <td>EMPID27088</td>
-              <td>India Stone</td>
-              <td class="container">
-                <DIV class="row">
-                  <span class="offset-md-2 col-sm-4" >Basic Salary:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">15000</span>
-                </DIV>
-                <div class="row">
-                  <span class="offset-md-2 col-sm-4">Total Allowance:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">100</span>          
-                </div>
-                <div class="row">
-                  <span class="offset-md-2 col-sm-4">Total Deducation:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">0</span>       
-                </div>
-                <hr>
-                <div class="row">
-                  <span class="offset-md-2 col-sm-4">Net Salary:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">150100</span>
-                </div>
-              </td>
-              <td>June, 2018</td>
-              <td><button type="button" class="btn btn-success">paid</button></td>
-              <td>
-                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="DropDownActionButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Action
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="DropDownActionButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-
-
-            <tr>
-              <td>4</td>
-              <td>EMPID27088</td>
-              <td>India Stone</td>
-              <td class="container">
-                <DIV class="row">
-                  <span class="offset-md-2 col-sm-4" >Basic Salary:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">15000</span>
-                </DIV>
-                <div class="row">
-                  <span class="offset-md-2 col-sm-4">Total Allowance:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">100</span>          
-                </div>
-                <div class="row">
-                  <span class="offset-md-2 col-sm-4">Total Deducation:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">0</span>       
-                </div>
-                <hr>
-                <div class="row">
-                  <span class="offset-md-2 col-sm-4">Net Salary:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">150100</span>
-                </div>
-              </td>
-              <td>June, 2018</td>
-              <td><button type="button" class="btn btn-success">paid</button></td>
-              <td>
-                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="DropDownActionButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Action
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="DropDownActionButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-
-
-            <tr>
-              <td>5</td>
-              <td>EMPID27088</td>
-              <td>India Stone</td>
-              <td class="container">
-                <DIV class="row">
-                  <span class="offset-md-2 col-sm-4" >Basic Salary:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">15000</span>
-                </DIV>
-                <div class="row">
-                  <span class="offset-md-2 col-sm-4">Total Allowance:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">100</span>          
-                </div>
-                <div class="row">
-                  <span class="offset-md-2 col-sm-4">Total Deducation:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">0</span>       
-                </div>
-                <hr>
-                <div class="row">
-                  <span class="offset-md-2 col-sm-4">Net Salary:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">150100</span>
-                </div>
-              </td>
-              <td>June, 2018</td>
-              <td><button type="button" class="btn btn-success">paid</button></td>
-              <td>
-                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="DropDownActionButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Action
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="DropDownActionButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-
-
-            <tr>
-              <td>6</td>
-              <td>EMPID27088</td>
-              <td>India Stone</td>
-              <td class="container">
-                <DIV class="row">
-                  <span class="offset-md-2 col-sm-4" >Basic Salary:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">15000</span>
-                </DIV>
-                <div class="row">
-                  <span class="offset-md-2 col-sm-4">Total Allowance:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">100</span>          
-                </div>
-                <div class="row">
-                  <span class="offset-md-2 col-sm-4">Total Deducation:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">0</span>       
-                </div>
-                <hr>
-                <div class="row">
-                  <span class="offset-md-2 col-sm-4">Net Salary:</span>
-                  <span class="col-sm-4" style="font-weight: 600;">150100</span>
-                </div>
-              </td>
-              <td>June, 2018</td>
-              <td><button type="button" class="btn btn-success">paid</button></td>
-              <td>
-                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="DropDownActionButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Action
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="DropDownActionButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div>
-              </td>
-            </tr>
-
+            </tr> 
+          -->
 
 
 
@@ -443,5 +248,107 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      
+      $data = [
+          { 
+            id: 'EMID01',Employee:'Rakesh Verma',date:'june 2018' ,status:'paid',details:[
+            {item:'Basic Salary',value:'1500'},
+            {item:'Total Allowance',value:'100'},
+            {item:'Total Deducation',value:'0'},
+            {item:'Net Salary',value:'1600'},
+          ]}, 
+          { 
+            id: 'EMID02' ,Employee:'Chetan Bhagat',date:'July 2017' ,status:'paid',details:[
+            {item:'Basic Salary',value:'34000'},
+            {item:'Total Allowance',value:'200'},
+            {item:'Total Deducation',value:'100'},
+            {item:'Net Salary',value:'35000'},
+          ]}, 
+          { 
+            id: 'EMID03' ,Employee:'Mark Manson',date:'april 2018' ,status:'paid',details:[
+            {item:'Basic Salary',value:'4500'},
+            {item:'Total Allowance',value:'20'},
+            {item:'Total Deducation',value:'10'},
+            {item:'Net Salary',value:'4510'},
+          ]}, 
+          { 
+            id: 'EMID04' ,Employee:'Ravi Bhusan',date:'june 2019' ,status:'not-paid',details:[
+            {item:'Basic Salary',value:'55000'},
+            {item:'Total Allowance',value:'55'},
+            {item:'Total Deducation',value:'10'},
+            {item:'Net Salary',value:'55045'},
+          ]}, 
+          { 
+            id: 'EMID05' ,Employee:'Roman Rikki',date:'december 2018' ,status:'paid',details:[
+            {item:'Basic Salary',value:'120001'},
+            {item:'Total Allowance',value:'500'},
+            {item:'Total Deducation',value:'1'},
+            {item:'Net Salary',value:'12500'},
+          ]}, 
+      ];
+      $.each($data, function( index, value ) {
+        console.log(value);
+        $buttonColor = "success";
+        $buttonText = "Paid";
+        if(value.status != "paid"){
+          $buttonColor= "danger";
+          $buttonText = "Dues";
+        }
+
+        //felling dynamic data to the variable
+        $DynamicFieldsDetails = "";
+        $lengthOfAaray = value.details.length;
+        $.each(value.details,function(index,value){
+          if(index == $lengthOfAaray - 2)
+            $DynamicFieldsDetails+= '<DIV class="row">'+
+                    '<span class="offset-md-2 col-sm-4" >'+value.item+':</span>'+
+                    '<span class="col-sm-4" style="font-weight: 600;">'+value.value+'</span>'+
+                  '</DIV><hr>';
+          else
+            $DynamicFieldsDetails+= '<DIV class="row">'+
+                  '<span class="offset-md-2 col-sm-4" >'+value.item+':</span>'+
+                  '<span class="col-sm-4" style="font-weight: 600;">'+value.value+'</span>'+
+                '</DIV>';
+        });
+        $('#payslipTable > tbody:last-child').append('<tr>'+
+              '<td>'+(index+1)+'</td>'+
+              '<td>'+value.id+'</td>'+
+              '<td>'+value.Employee+'</td>'+
+              '<td class="container">'+
+                $DynamicFieldsDetails+
+              '</td>'+
+              '<td>'+value.date+'</td>'+
+              '<td><button type="button" class="btn btn-'+$buttonColor+'">'+$buttonText+'</button></td>'+
+              '<td>'+
+                '<button class = "action_button btn btn-dark" id="'+value.id+'">'+
+                  'Edit'+
+                '</button>'+
+              '</td>'+
+            '</tr>');
+      });
+      
+      $("#search").click(function(){
+        $month = $("#MonthDropDown option:selected");
+        $year = $("#YearDropDown option:selected");
+        $("body").append('<div class="alert alert-success" role="alert">This is a success alert—check it out!</div>');
+        $.ajax({
+          url: "test.html",
+          type: "POST",
+          data: {month:$month ,year:$year},
+        }).done(function() {
+              
+        });
+      });
+      $(".action_button").click(function(){
+        $id = $(".action_button").attr("id");
+        window.open("./EditPayslipList.html/"+$id,"_blank");
+
+      });
+    </script>
   </body>
 </html>

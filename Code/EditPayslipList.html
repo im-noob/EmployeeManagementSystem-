@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- font awsome -->
+    <<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <title>Payslip List</title>
+  </head>
+  <body>
+    <!-- Code Start:section -->
+    <div class="container">
+        <DIV class="col-sm-7"><H4><i class="far fa-arrow-alt-circle-right fa-1x"></i><SPAN>  </SPAN>Payslip List</H4></DIV>
+        <br>
+        <div class="row">
+          <div class="offset-md-3 col-sm-6">
+            <form>
+              <div class="form-group">
+                <label for="ID">ID</label>
+                <input type="email" class="form-control" id="ID">
+              </div>
+              
+              <div class="form-group">
+                <label for="EmployeeName">Employee Name</label>
+                <input type="email" class="form-control" id="EmployeeName">
+              </div>
+
+              <div class="form-group">
+                <label for="BasicSalary">Basic Salary</label>
+                <input type="email" class="form-control" id="BasicSalary">
+              </div>
+
+              <div class="form-group">
+                <label for="TotalAllowance">Total Allowance</label>
+                <input type="email" class="form-control" id="TotalAllowance">
+              </div>
+
+              <div class="form-group">
+                <label for="Deducation">Deducation</label>
+                <input type="email" class="form-control" id="Deducation">
+              </div>
+
+
+              
+              <div class="form-group">
+                <label for="Date">Date</label>
+                <input type="text" class="form-control" id="Date">
+              </div>
+
+              
+              <div class="form-group">
+                <label for="StatusDropDown">Status</label>
+                <select class="form-control" id="StatusDropDown">
+                          <option value="Paid">Paid</option>
+                          <option value="Non-Paid">Non-Paid</option>
+                          
+                        </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+          </div>
+        </div>
+        
+
+    </div>
+    <!-- code END:section -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $data = [
+          { 
+            id: 'EMID01',Employee:'Rakesh Verma',date:'june 2018' ,status:'Paid',details:[
+            {item:'Basic Salary',value:'1500'},
+            {item:'Total Allowance',value:'100'},
+            {item:'Total Deducation',value:'0'},
+            {item:'Net Salary',value:'1600'},
+          ]} 
+      ];
+      $(function(){
+        console.log($data);
+        $("#ID").attr("value",$data[0].id);
+        $("#EmployeeName").attr("value",$data[0].Employee);
+        $("#BasicSalary").attr("value",$data[0].details[0].value);
+        $("#TotalAllowance").attr("value",$data[0].details[1].value);
+        $("#Deducation").attr("value",$data[0].details[2].value);
+        $("#Date").val($data[0].date);
+        $("#StatusDropDown").val($data[0].status); 
+
+
+
+      });
+    </script>
+  </body>
+</html>
